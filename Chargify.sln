@@ -7,15 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		.tfignore = .tfignore
-		.travis.yml = .travis.yml
-		NuGet.config = NuGet.config
 		version.json = version.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{1109C7B5-C897-4B8C-8942-AF7F8B7FFE83}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B1023B37-8D93-4B15-80DB-4C99742E26EE}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargifyDotNet", "Source\ChargifyDotNet\ChargifyDotNet.csproj", "{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargifyDotNet.Tests", "Source\ChargifyDotNet.Tests\ChargifyDotNet.Tests.csproj", "{A06994B4-ADE0-4EEB-B0DC-C54DC5C34539}"
@@ -30,14 +26,18 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{C618CDC0-A9D1-4FF0-93A8-5A46848BFE14}.Release|x86.ActiveCfg = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{61707A83-DFFC-4CBF-BB4C-0D41B21F94A7}.Release|x86.Build.0 = Release|Any CPU
 		{A06994B4-ADE0-4EEB-B0DC-C54DC5C34539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A06994B4-ADE0-4EEB-B0DC-C54DC5C34539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06994B4-ADE0-4EEB-B0DC-C54DC5C34539}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
