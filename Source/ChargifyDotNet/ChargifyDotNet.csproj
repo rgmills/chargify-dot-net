@@ -5,14 +5,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>chargify</PackageId>
+    <PackageId>chargify-netstandard</PackageId>
     <PackageProjectUrl>https://github.com/kfrancis/chargify-dot-net</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/kfrancis/chargify-dot-net/master/LICENSE</PackageLicenseUrl>
     <PackageTags>Chargify</PackageTags>
-    <Authors>KFrancis, DBall</Authors>
+    <Authors>RGMills, KFrancis, DBall</Authors>
     <Company>Clinical Support Systems</Company>
     <Product>Chargify.NET</Product>
-    <Description>Chargify.NET is a comprehensive .NET API wrapper library for accessing Chargify.com, using XML or JSON to read/write.</Description>
+    <Description>Chargify.NET is a comprehensive .NET API wrapper library for accessing Chargify.com, using XML or JSON to read/write.  This fork removes older framework targets and supports multiple coupons.</Description>
     <AssemblyVersion>1.2.5</AssemblyVersion>
     <FileVersion>1.2.5</FileVersion>
     <VersionPrefix>1.2.5</VersionPrefix>

@@ -1,17 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net45;</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0'">
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  </ItemGroup>
-  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <PackageReference Include="MSTest.TestAdapter" Version="1.1.17" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.1.17" />
   </ItemGroup>
   
   <ItemGroup>
@@ -30,10 +25,6 @@
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0'">
     <DefineConstants>DEBUG;NETCORE;NETSTANDARD;NETSTANDARD2_0;NETCOREAPP2_0;NUNIT</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <DefineConstants>NET45;NETFULL</DefineConstants>
   </PropertyGroup>
 
 </Project>
