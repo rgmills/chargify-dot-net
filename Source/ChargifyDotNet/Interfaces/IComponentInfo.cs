@@ -104,10 +104,10 @@ namespace ChargifyNET
         /// </summary>
         string Name { get; }
 
-		/// <summary>
-		/// The description of the component as created by the Chargify user
-		/// </summary>
-		string Description { get; }
+        /// <summary>
+        /// The description of the component as created by the Chargify user
+        /// </summary>
+        string Description { get; }
 
         /// <summary>
         /// Price of the component per unit (in cents)
@@ -168,5 +168,9 @@ namespace ChargifyNET
         /// The unit price for the component
         /// </summary>
         decimal UnitPrice { get; set; }
+        /// <summary>
+        /// Id for the price point
+        /// </summary>
+        int? PricePointId { get; set; }
     }
 }

@@ -74,5 +74,10 @@ namespace ChargifyNET
         /// (On/Off components only)
         /// </summary>
         bool Enabled { get; }
+
+        /// <summary>
+        /// The ID of the price point for this usage of the component on the subscription
+        /// </summary>
+        int? PricePointId { get; }
     }
 }

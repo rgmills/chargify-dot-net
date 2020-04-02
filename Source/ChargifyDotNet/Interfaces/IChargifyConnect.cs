@@ -491,6 +491,10 @@ namespace ChargifyNET
         IReferralCode ValidateReferralCode(string ReferralCode);
         #endregion
 
+        #region
+        ComponentPricePoints GetComponentPricePoints(int componentId);
+        #endregion
+
         #region Usage
         /// <summary>
         /// Method for adding a metered component usage to the subscription

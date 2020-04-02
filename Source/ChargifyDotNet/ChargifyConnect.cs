@@ -6005,6 +6005,25 @@ namespace ChargifyNET
         }
         #endregion
 
+        #region Component Price Points
+        public ComponentPricePoints GetComponentPricePoints(int componentId)
+        {
+            try
+            {
+                string response = this.DoRequest(string.Format("components/{0}/price_points.json", componentId));
+
+                return JsonConvert.DeserializeObject<ComponentPricePoints>(response);
+            }
+            catch (ChargifyException cex)
+            {
+                // Throw if anything but not found, since not found is telling us that it's working correctly
+                // but that there just isn't a referral code with that code.
+                if (cex.StatusCode == HttpStatusCode.NotFound) return null;
+                throw cex;
+            }            
+        }
+        #endregion
+
         #region Utility Methods
         private string GetBody(object obj)
         {

@@ -52,6 +52,7 @@ namespace ChargifyNET
         private const string PricingSchemeKey = "pricing_scheme";
         private const string UnitBalanceKey = "unit_balance";
         private const string EnabledKey = "enabled";
+        private const string PricePointIdKey = "price_point_id";
         #endregion
 
         #region Constructors
@@ -142,6 +143,9 @@ namespace ChargifyNET
                     case EnabledKey:
                         _enabled = obj.GetJSONContentAsBoolean(key);
                         break;
+                    case PricePointIdKey:
+                        _pricePointId = obj.GetJSONContentAsNullableInt(key);
+                        break;
                 }
             }
         }
@@ -180,6 +184,9 @@ namespace ChargifyNET
                         break;
                     case EnabledKey:
                         _enabled = dataNode.GetNodeContentAsBoolean();
+                        break;
+                    case PricePointIdKey:
+                        _pricePointId = dataNode.GetNodeContentAsNullableInt();
                         break;
                 }
             }
@@ -271,6 +278,15 @@ namespace ChargifyNET
             get { return _enabled; }
         }
         private bool _enabled;
+
+        /// <summary>
+        /// The ID of the price point for this usage of the component on the subscription
+        /// </summary>
+        public int? PricePointId
+        {
+            get { return _pricePointId; }
+        }
+        private int? _pricePointId;
 
         #endregion
 

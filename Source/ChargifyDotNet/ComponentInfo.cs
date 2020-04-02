@@ -35,6 +35,7 @@ namespace ChargifyNET
     using System.Collections.Generic;
     using System.Xml;
     using Json;
+    using Newtonsoft.Json;
     #endregion
 
     /// <summary>
@@ -160,7 +161,7 @@ namespace ChargifyNET
                         {
                             foreach (var jsonValue in pricesArray.Items)
                             {
-                                var priceObj = (JsonObject) jsonValue;
+                                var priceObj = (JsonObject)jsonValue;
                                 if (priceObj == null) continue;
                                 var bracketInfo = new PriceBracketInfo();
 
@@ -176,6 +177,9 @@ namespace ChargifyNET
                                             break;
                                         case "unit_price":
                                             bracketInfo.UnitPrice = priceObj.GetJSONContentAsDecimal(bracketKey);
+                                            break;
+                                        case "price_point_id":
+                                            bracketInfo.PricePointId = priceObj.GetJSONContentAsNullableInt(bracketKey);
                                             break;
                                     }
                                 }
@@ -253,6 +257,9 @@ namespace ChargifyNET
                                         break;
                                     case "unit_price":
                                         bracketInfo.UnitPrice = bracketNode.GetNodeContentAsDecimal();
+                                        break;
+                                    case "price_point_id":
+                                        bracketInfo.PricePointId = bracketNode.GetNodeContentAsNullableInt();
                                         break;
                                 }
                             }
@@ -441,5 +448,75 @@ namespace ChargifyNET
         /// The unit price for the component
         /// </summary>
         public decimal UnitPrice { get; set; }
+        /// <summary>
+        /// Id for the price point
+        /// </summary>
+        public int? PricePointId { get; set; }
+    }
+
+    public class ComponentPricePoints : ChargifyBase
+    {
+        [JsonProperty("price_points")]
+        public PricePoint[] PricePoints { get; set; }
+    }
+
+    public class PricePoint : ChargifyBase
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("default")]
+        public bool Default { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("pricing_scheme")]
+        public string PricingScheme { get; set; }
+
+        [JsonProperty("component_id")]
+        public long ComponentId { get; set; }
+
+        [JsonProperty("handle")]
+        public string Handle { get; set; }
+
+        [JsonProperty("archived_at")]
+        public object ArchivedAt { get; set; }
+
+        [JsonProperty("created_at")]
+        public DateTimeOffset CreatedAt { get; set; }
+
+        [JsonProperty("updated_at")]
+        public DateTimeOffset UpdatedAt { get; set; }
+
+        [JsonProperty("prices")]
+        public PriceBracket[] Prices { get; set; }
+    }
+
+    public class PriceBracket : ChargifyBase
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("component_id")]
+        public long ComponentId { get; set; }
+
+        [JsonProperty("starting_quantity")]
+        public long StartingQuantity { get; set; }
+
+        [JsonProperty("ending_quantity")]
+        public object EndingQuantity { get; set; }
+
+        [JsonProperty("unit_price")]
+        public string UnitPrice { get; set; }
+
+        [JsonProperty("price_point_id")]
+        public long PricePointId { get; set; }
+
+        [JsonProperty("formatted_unit_price")]
+        public string FormattedUnitPrice { get; set; }
+
+        [JsonProperty("segment_id")]
+        public object SegmentId { get; set; }
     }
 }
